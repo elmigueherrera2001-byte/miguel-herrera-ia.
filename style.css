@@ -1,3 +1,4 @@
+
 body { 
   font-family: Arial, sans-serif; 
   background: #121212; 
@@ -29,3 +30,4 @@ input[type="text"] { width: 70%; padding: 10px; background: #333; color: white; 
 button { padding: 10px; margin-left: 5px; background: #333; color: white; border: none; border-radius: 5px; cursor: pointer; }
 button:hover { background: #555; }
 input[type="file"] { margin-bottom: 10px; }
+img { max-width: 100%; margin-top: 10px; border-radius: 5px; }
