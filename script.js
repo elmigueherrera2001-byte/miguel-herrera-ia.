@@ -1,11 +1,12 @@
+
 const userInput = document.getElementById("userInput");
 const sendBtn = document.getElementById("sendBtn");
 const chatbox = document.getElementById("chatbox");
 const fileInput = document.getElementById("fileInput");
 const imageBtn = document.getElementById("imageBtn");
 
-// Tu API Key de OpenAI
-const API_KEY = "TU_API_KEY_AQUI";
+// Tu API Key directamente (solo para uso personal)
+const API_KEY = "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";
 
 // Enviar mensaje de texto
 sendBtn.addEventListener("click", async () => {
@@ -56,13 +57,13 @@ imageBtn.addEventListener("click", async () => {
       })
     });
     const data = await response.json();
-    const imgUrl = data.data[0].url;
-    appendMessageImage(imgUrl);
+    appendMessageImage(data.data[0].url);
   } catch {
     appendMessage("Error al generar imagen.", "bot");
   }
 });
 
+// Subir archivos
 fileInput.addEventListener("change", (e) => {
   const file = e.target.files[0];
   if (file) {
@@ -70,7 +71,7 @@ fileInput.addEventListener("change", (e) => {
   }
 });
 
-// Funciones de ayuda
+// Funciones para mostrar mensajes
 function appendMessage(text, cls) {
   const div = document.createElement("div");
   div.classList.add("message", cls);
@@ -84,7 +85,6 @@ function appendMessageImage(url) {
   div.classList.add("message", "bot");
   const img = document.createElement("img");
   img.src = url;
-  img.style.maxWidth = "100%";
   div.appendChild(img);
   chatbox.appendChild(div);
   chatbox.scrollTop = chatbox.scrollHeight;
