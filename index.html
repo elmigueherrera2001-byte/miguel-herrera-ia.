@@ -5,17 +5,78 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Miguel Herrera IA</title>
 <style>
-body { font-family:'Segoe UI', sans-serif; background:#1e1e2f; color:#fff; margin:0; display:flex; flex-direction:column; height:100vh; }
-header { background:#b30000; text-align:center; padding:15px; font-size:1.5em; font-weight:bold; }
-#chatContainer { flex:1; display:flex; flex-direction:column; max-width:700px; margin:20px auto; background:#2b2b3c; border-radius:10px; overflow:hidden; box-shadow:0 4px 12px rgba(0,0,0,0.3); }
-#messages { flex:1; padding:15px; overflow-y:auto; }
-.message { margin:10px 0; padding:10px 15px; border-radius:15px; max-width:80%; word-wrap:break-word; }
-.user { background:#b30000; color:#fff; align-self:flex-end; text-align:right; }
-.bot { background:#444466; color:#fff; align-self:flex-start; text-align:left; }
-#inputContainer { display:flex; border-top:1px solid #555; }
-#inputContainer input { flex:1; padding:15px; border:none; background:#1e1e2f; color:#fff; font-size:1em; }
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #1e1e2f;
+  color: #fff;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+header {
+  background: #b30000;
+  text-align: center;
+  padding: 15px;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+#chatContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  max-width: 700px;
+  margin: 20px auto;
+  background: #2b2b3c;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+#messages {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+}
+.message {
+  margin: 10px 0;
+  padding: 10px 15px;
+  border-radius: 15px;
+  max-width: 80%;
+  word-wrap: break-word;
+}
+.user {
+  background: #b30000;
+  color: #fff;
+  align-self: flex-end;
+  text-align: right;
+}
+.bot {
+  background: #444466;
+  color: #fff;
+  align-self: flex-start;
+  text-align: left;
+}
+#inputContainer {
+  display: flex;
+  border-top: 1px solid #555;
+}
+#inputContainer input {
+  flex: 1;
+  padding: 15px;
+  border: none;
+  background: #1e1e2f;
+  color: #fff;
+  font-size: 1em;
+}
 #inputContainer input:focus { outline:none; }
-#inputContainer button { padding:15px; background:#b30000; border:none; color:#fff; cursor:pointer; font-weight:bold; }
+#inputContainer button {
+  padding: 15px;
+  background: #b30000;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+}
 #inputContainer button:hover { background:#ff0000; }
 </style>
 </head>
@@ -57,7 +118,7 @@ async function sendMessage() {
       method: 'POST',
       headers: {
         'Content-Type':'application/json',
-        'Authorization':'Bearer TU_API_KEY_AQUI'
+        'Authorization':'Bearer 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'
       },
       body: JSON.stringify({
         model: "gpt-3.5-turbo",
