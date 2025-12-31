@@ -1,0 +1,31 @@
+body { 
+  font-family: Arial, sans-serif; 
+  background: #121212; 
+  color: white; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  height: 100vh;
+}
+.container { 
+  width: 600px; 
+  background: #1e1e1e; 
+  padding: 20px; 
+  border-radius: 10px; 
+  box-shadow: 0 0 20px #000; 
+}
+#chatbox { 
+  height: 400px; 
+  overflow-y: auto; 
+  border: 1px solid #333; 
+  padding: 10px; 
+  margin-bottom: 10px; 
+  background: #1e1e1e; 
+}
+.message { margin: 5px 0; }
+.user { color: #00bfff; }
+.bot { color: #00ff00; }
+input[type="text"] { width: 70%; padding: 10px; background: #333; color: white; border: none; border-radius: 5px; }
+button { padding: 10px; margin-left: 5px; background: #333; color: white; border: none; border-radius: 5px; cursor: pointer; }
+button:hover { background: #555; }
+input[type="file"] { margin-bottom: 10px; }
